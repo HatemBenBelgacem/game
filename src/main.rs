@@ -1,5 +1,6 @@
 mod bank;
 use bank::Bank;
+use std::io;
 
 // The main function where the program logic is executed
 fn main() {
@@ -9,19 +10,32 @@ fn main() {
 
     println!("---");
 
-    // Deposit $50.00
-    konto.einzahlung(50.0);
+    let mut einzahlung = String::new();
+
+    io::stdin()
+        .read_line(&met einzahlung)
+
+    match einzahlung {
+        "a" => 
+    }
+    
+    fn einz
+    let mut eingabe = String::new();
+            io::stdin()
+                .read_line(&mut eingabe)
+                .expect("Fehler");
+
+                let eingabe01: f64 = eingabe
+                    .trim()
+                    .parse()
+                    .expect("Fehler");
+
+    println!("Eingabe {}", eingabe01);
+
+    println!("----------------");
+
+    konto.einzahlung(eingabe01);
     konto.saldo_pruefen();
 
-    println!("---");
 
-    // Try to withdraw $200.00 (will fail due to insufficient funds)
-    konto.auszahlung(200.0);
-    konto.saldo_pruefen();
-
-    println!("---");
-
-    // Withdraw $30.00 (will be successful)
-    konto.auszahlung(30.0);
-    konto.saldo_pruefen();
 }

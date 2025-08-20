@@ -1,3 +1,5 @@
+use std::io;
+
 pub struct Bank {
     saldo:f64,
 }
@@ -9,7 +11,7 @@ impl Bank {
         }
     }
 
-    pub fn einzahlung(&mut self, betrag: f64) {
+    pub fn einzahlung(&mut self, betrag: f64) { 
         if betrag > 0.0 {
             self.saldo += betrag; 
             println!("Erflogreiche Einzahlung von ${:.2}", betrag);
