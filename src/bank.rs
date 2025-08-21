@@ -11,5 +11,8 @@ impl Bank {
         }
     }
 
+    pub fn get_Bezeichnung(&self){
+        println!("Bankbezeichnung: {}", self.bezeichnung);
+    }
 
 }
