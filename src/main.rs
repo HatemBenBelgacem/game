@@ -1,11 +1,13 @@
+mod konto;
 mod bank;
-use bank::Bank;
+
+use konto::Konto;
 use std::io;
 
 // The main function where the program logic is executed
 fn main() {
     // Create a new bank account with an initial balance of $100.00
-    let mut konto = Bank::new(100.0);
+    let mut konto = Konto::new(100.0, "UBS");
     konto.saldo_pruefen();
 
     println!("---");
