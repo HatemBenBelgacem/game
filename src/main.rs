@@ -12,29 +12,33 @@ fn main() {
 
     let mut einzahlung = String::new();
 
+    println!("Wählen Sie ihren Prozess:");
+
     io::stdin()
-        .read_line(&met einzahlung)
+        .read_line(&mut einzahlung)
+        .expect("Fehler");
 
-    match einzahlung {
-        "a" => 
-    }
-    
-    fn einz
-    let mut eingabe = String::new();
-            io::stdin()
-                .read_line(&mut eingabe)
-                .expect("Fehler");
 
-                let eingabe01: f64 = eingabe
-                    .trim()
-                    .parse()
+
+    match einzahlung.trim() {
+        "a" => {
+            let mut eingabe = String::new();
+
+            println!("Geben Sie einen Betrag ein: ");
+                io::stdin()
+                    .read_line(&mut eingabe)
                     .expect("Fehler");
 
-    println!("Eingabe {}", eingabe01);
+            let eingabe01: f64 = eingabe
+                .trim()
+                .parse()
+                .expect("Fehler");
 
-    println!("----------------");
+            konto.einzahlung(eingabe01);
+        },
+        _ => println!("Leer"),
+    }
 
-    konto.einzahlung(eingabe01);
     konto.saldo_pruefen();
 
 
